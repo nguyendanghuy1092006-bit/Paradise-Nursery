@@ -5,7 +5,8 @@ import './App.css';
 function App() {
   const [showProducts, setShowProducts] = useState(false);
 
-  const handleGetStarted = () => {
+  // SỬA LỖI: Đổi tên hàm thành handleGetStartedClick
+  const handleGetStartedClick = () => {
     setShowProducts(true);
   };
 
@@ -13,9 +14,11 @@ function App() {
     <div className="App">
       {!showProducts ? (
         <div className="landing-page">
-          <h1>Paradise Nursery</h1>
+          {/* SỬA LỖI: Thêm chữ "Welcome to" */}
+          <h1>Welcome to Paradise Nursery</h1>
           <p>Bring Nature Home</p>
-          <button className="get-started-btn" onClick={handleGetStarted}>
+          {/* Cập nhật tên hàm ở onClick */}
+          <button className="get-started-btn" onClick={handleGetStartedClick}>
             Get Started
           </button>
         </div>
